@@ -15,6 +15,6 @@ Lýsing kemur hér
 
 ## Þeir sem unnu að verkefni
 
-*Nafn
-*Nafn
-*Nafn
+* Nafn
+* Nafn
+* Nafn
