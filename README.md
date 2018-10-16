@@ -4,9 +4,10 @@
 
 Til þess að sækja alla pakka
 
-´´´bash
+```bash
 npm install
-´´´
+```
+
 
 ## Lýsing verkefnis
 
