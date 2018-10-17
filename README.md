@@ -8,6 +8,12 @@ Til þess að sækja alla pakka
 npm install
 ```
 
+Til þess að keyra allt
+
+```bash
+npm run dev
+```
+
 
 ## Lýsing verkefnis
 
