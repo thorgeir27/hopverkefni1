@@ -1,0 +1,10 @@
+@import "scss/config";
+
+.header{
+    background-color: $green;
+    display: flex;
+
+    h1{
+        width: 100%
+    }
+}

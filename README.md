@@ -8,7 +8,7 @@ Til þess að sækja alla pakka
 npm install
 ```
 
-Til þess að keyra allt
+Til þess að keyra browser sync og sass saman
 
 ```bash
 npm run dev
