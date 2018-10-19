@@ -6,12 +6,13 @@
     <title>Karfa</title>
 
     <link rel="stylesheet" href="../grid.css">
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../stylescart.css">
   </head>
+
   <body>
     <header>
       <section class="header">
-        <h1>Vöruhúsið0</h1>
+        <h1>Vöruhúsið</h1>
         <div class="header__sections">
           <div class="header__section"><a href="index.html">FORSÍÐA</a></div>
           <div class="header__section"><a href="pages/products.html">VÖRUR</a></div>
@@ -20,39 +21,44 @@
         </div>
       </section>
     </header>
+
     <main>
-      <h2>Vörur í körfu</h2>
-        <img src="../img/watch.jpg" alt="Ótrúlegt úr">
-      <h2>Ótrúlegt úr</h2> 
+      <section>
+        <h2>Vörur í körfu</h2>
+
+          <img class="image" src="../img/watch.jpg" alt="Ótrúlegt úr">
+        <h2>Ótrúlegt úr</h2> 
         <p>Hvað er klukkan? Þetta úr mun svara því hvenær sem er.</p>
 
-      <h2>99.900 kr.- </h2>
+        <h2>99.900 kr.- </h2>
         <p>Fjöldi: </p> 
 
         <input type="number" value="1" >
         <button>Uppfæra</button>
         <button>Eyða úr körfu</button>
-
+      </section>  
      
-      <h2>Hágæða heyrnatól </h2> 
-        <img src="../img/headphones.jpg" alt="Headphones">
+      <section>  
+        <h2>Hágæða heyrnatól </h2> 
+          <img src="../img/headphones.jpg" alt="Headphones">
         <p>Þú munt ekki heyra neitt nema hágæða tónlist með þessum hágæða heyrnartólum. Höfum við minnst á að þau eru hágæða? </p>
 
-      <h2>39.999 kr.-</h2>
+        <h2>39.999 kr.-</h2>
         <p>Fjöldi: </p>
 
         <input type="number" value="2" >
         <button>Uppfæra</button>
         <button>Eyða úr körfu</button>
+      </section>  
 
-      <h2>Sendingarupplýsingar</h2>
+      <section>  
+        <h2>Sendingarupplýsingar</h2>
         Nafn: <input type="text" name="nafn">
 
         Heimilisfang: <input type="text" name="Heimilisfang"> 
 
         <label for="Póstnúmer">Póstnúmer:</label>
         <select id="Póstnúmer" name="póstnúmer">
-   
           <option value="veljið" hidden disabled selected>-Velja póstnúmer</option> 
           <option value="bla">101 Reykjavík</option>
           <option value="bla">103 Reykjavík</option>
@@ -238,7 +244,7 @@
             </select>
 
 
-      <h2>Greiðsluupplýsingar</h2> 
+        <h2>Greiðsluupplýsingar</h2> 
         Kortanúmer: <input type="text" name="Kortanúmer">
 
         Korthafi: <input type="text" name="Korthafi">
@@ -259,15 +265,19 @@
         <option value="nov">11</option>  
         <option value="des">12</option>   
         </select>
+
         <label for="Mán">Ár:</label> 
         <select id="Mán" name="Mán">
         <option value="2018">2018</option>
-        <option value="13-20">2019</option>
-        <option value="21-65">2020</option>
-        <option value="Eldri_en_65">2021</option>  
-        <option value="Eldri_en_65">2022</option>  
-        <option value="Eldri_en_65">2023</option>  
-        <option value="Eldri_en_65">2024</option>  
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>  
+        <option value="2022">2022</option>  
+        <option value="2023">2023</option>  
+        <option value="2024">2024</option>  
+        <option value="2025">2025</option>  
+        <option value="2026">2026</option>  
+      </section>    
     </main>
             
   </body>
