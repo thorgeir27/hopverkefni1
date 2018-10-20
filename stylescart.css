@@ -141,6 +141,12 @@
           flex-flow: row;
           flex-wrap: wrap;
       }
+      .text2 {
+          margin-top: 70%;
+      }
+      .text3 {
+          margin-top: 62%;
+      }
   }
   /* Þegar við erum á milli 800px og 1499px */
   @media (min-width: 800px) AND (max-width: 1499px){
@@ -178,3 +184,4 @@
         margin-bottom: 20px;
     }
     }
+    
