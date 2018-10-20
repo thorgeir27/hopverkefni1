@@ -147,6 +147,15 @@
       .text3 {
           margin-top: 62%;
       }
+      
+      .offset {
+          display: flex;
+          margin-left: 20%;
+      }
+      .offset-2{
+         
+          
+      }
   }
   /* Þegar við erum á milli 800px og 1499px */
   @media (min-width: 800px) AND (max-width: 1499px){
