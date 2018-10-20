@@ -23,35 +23,55 @@
     </header>
 
     <main>
-      <section>
+      
         <h2>Vörur í körfu</h2>
+        <div class="grid">
 
-          <img class="image" src="../img/watch.jpg" alt="Ótrúlegt úr">
-        <h2>Ótrúlegt úr</h2> 
-        <p>Hvað er klukkan? Þetta úr mun svara því hvenær sem er.</p>
+          <div class="grid__row">
+            <div class="grid__col grid__col-3">
+              <img class="image" src="../img/watch.jpg" alt="Ótrúlegt úr">
+            </div>
+          
+            <div class="grid__col grid__col-3">
+              <div class="grid__text">
+                <h2>Ótrúlegt úr</h2>   
+                  <p>Hvað er klukkan? Þetta úr mun svara því hvenær sem er.</p>
+              </div>
+              <div class="grid__text2">
+                <h3>99.900 kr.- </h3>
+              </div>  
+                <div class="takkar">
+                  <p>Fjöldi: </p> 
+                  <input type="number" value="1" >
+                  <button>Uppfæra</button>
+                  <button>Eyða úr körfu</button>
+                </div>  
+            </div> 
+          </div>
+          <div class="grid__row">
+            <div class="grid__col grid__col-3">
+              <img class="image" src="../img/headphones.jpg" alt="Headphones">
+            </div>  
 
-        <h2>99.900 kr.- </h2>
-        <p>Fjöldi: </p> 
+            <div class="grid__col grid__col-3">
+              <div class="grid__text">   
+                <h2>Hágæða heyrnatól </h2>  
+                 <p>Þú munt ekki heyra neitt nema hágæða tónlist með þessum hágæða heyrnartólum. Höfum við minnst á að þau eru hágæða? </p>
+              </div>
+            <div class="grid__text2">
+              <h2>39.999 kr.-</h2>
+            </div>
+              <div class="takkar">
+                <p>Fjöldi: </p>
+                <input type="number" value="2"> 
+                <button>Uppfæra</button>
+                <button>Eyða úr körfu</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <input type="number" value="1" >
-        <button>Uppfæra</button>
-        <button>Eyða úr körfu</button>
-      </section>  
-     
-      <section>  
-        <h2>Hágæða heyrnatól </h2> 
-          <img src="../img/headphones.jpg" alt="Headphones">
-        <p>Þú munt ekki heyra neitt nema hágæða tónlist með þessum hágæða heyrnartólum. Höfum við minnst á að þau eru hágæða? </p>
-
-        <h2>39.999 kr.-</h2>
-        <p>Fjöldi: </p>
-
-        <input type="number" value="2" >
-        <button>Uppfæra</button>
-        <button>Eyða úr körfu</button>
-      </section>  
-
-      <section>  
+      
         <h2>Sendingarupplýsingar</h2>
         Nafn: <input type="text" name="nafn">
 
@@ -241,8 +261,7 @@
           <option value="bla">881 Kirkjubæjarklaustri</option>
           <option value="bla">900 Vestmannaeyjum</option>
           <option value="bla">902 Vestmannaeyjum</option>
-            </select>
-
+        </select>
 
         <h2>Greiðsluupplýsingar</h2> 
         Kortanúmer: <input type="text" name="Kortanúmer">
@@ -251,7 +270,6 @@
 
         Gildistími: <label for="Mán">Mán:</label> 
         <select id="Mán" name="Mán">
-
         <option value="jan">01</option>
         <option value="feb">02</option>
         <option value="mar">03</option>
