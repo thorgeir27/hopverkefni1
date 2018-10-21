@@ -142,20 +142,22 @@
           flex-wrap: wrap;
       }
       .text2 {
-          margin-top: 70%;
-      }
-      .text3 {
-          margin-top: 62%;
+          margin-top: 46%;
       }
       
-      .offset {
-          display: flex;
+      .table {
           margin-left: 20%;
+         flex-direction: row;
+         flex-flow: row;
       }
-      .offset-2{
-         
-          
+
+      td {
+          display: flex;
+          flex-flow: row;
+          background-color: aqua;
       }
+      
+      
   }
   /* Þegar við erum á milli 800px og 1499px */
   @media (min-width: 800px) AND (max-width: 1499px){

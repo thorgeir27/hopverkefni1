@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="../grid.css">
     <link rel="stylesheet" href="../stylescart.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   </head>
 
   <body>
@@ -60,7 +61,7 @@
                 <h2>Hágæða heyrnatól </h2>  
                  <p>Þú munt ekki heyra neitt nema hágæða tónlist með þessum hágæða heyrnartólum. Höfum við minnst á að þau eru hágæða? </p>
               </div>
-              <div class="text3">  
+              <div class="text2">  
                 <div class="grid__price">
                   <h2>39.999 kr.-</h2>
                 </div>
@@ -75,15 +76,19 @@
           </div>
         
 
-          <div class="grid__row">
-            <div class="grid__col offset-2">
-              <h2>Sendingarupplýsingar</h2>
-            </div>
-              <div class="input">
-                Nafn: <input type="text" name="nafn">
-                Heimilisfang: <input type="text" name="Heimilisfang"> 
-                  <label for="Póstnúmer">Póstnúmer:</label>
-                  <select id="Póstnúmer" name="póstnúmer">
+          <table class="table" style="width: 100%">
+        
+            <div class="grid__col grid__col-6">
+              <tr>
+                <th><h2>Sendingarupplýsingar</h2></th>
+              </tr>
+              <tr>
+                <td>Nafn: </td>
+                <td><input type="text" name="nafn"></td>
+                <td>Heimilisfang:</td>
+                <td><input type="text" name="Heimilisfang"></td>
+                 <td> <label for="Póstnúmer">Póstnúmer:</label> </td>
+                  <td><select id="Póstnúmer" name="póstnúmer">
                       <option value="veljið" hidden disabled selected>-Velja póstnúmer</option> 
                       <option value="bla">101 Reykjavík</option>
                       <option value="bla">103 Reykjavík</option>
@@ -266,33 +271,38 @@
                       <option value="bla">881 Kirkjubæjarklaustri</option>
                       <option value="bla">900 Vestmannaeyjum</option>
                       <option value="bla">902 Vestmannaeyjum</option>
-                  </select>
+                  </select></td>
               </div>   
+            </tr>
           
-            <div class="grid__col offset-2">       
-              <h2>Greiðsluupplýsingar</h2> 
-            </div>
-              <div class="input">
-                Kortanúmer: <input type="text" name="Kortanúmer">
-                Korthafi: <input type="text" name="Korthafi">
+            <div class="grid__col grid__col-6s">  
+              <tr>     
+              <th><h2>Greiðsluupplýsingar</h2> </th>
+            </tr>
+            <tr>
+                <td>Kortanúmer:</td>
+                <td><input type="text" name="Kortanúmer"></td>
+                <td>Korthafi: </td>
+                <td><input type="text" name="Korthafi"></td>
 
-                Gildistími: <label for="Mán">Mán:</label> 
-                  <select id="Mán" name="Mán">
-        <option value="jan">01</option>
-        <option value="feb">02</option>
-        <option value="mar">03</option>
-        <option value="apr">04</option>  
-        <option value="mai">05</option>  
-        <option value="jun">06</option>  
-        <option value="jul">07</option>  
-        <option value="agu">08</option>  
-        <option value="sept">09</option> 
-        <option value="okt">10</option>  
-        <option value="nov">11</option>  
-        <option value="des">12</option>   
-                  </select>
+                <td>Gildistími:</td> 
+              <td> <label for="Mán">Mán:</label>
+                  <select id="Mán" name="Mán"> 
+                    <option value="jan">01</option>
+                    <option value="feb">02</option>
+                    <option value="mar">03</option>
+                    <option value="apr">04</option>  
+                    <option value="mai">05</option>  
+                    <option value="jun">06</option>  
+                    <option value="jul">07</option>  
+                    <option value="agu">08</option>  
+                    <option value="sep">09</option> 
+                    <option value="okt">10</option>  
+                    <option value="nov">11</option>  
+                    <option value="des">12</option>   
+                  </select> </td>
 
-                  <label for="Mán">Ár:</label> 
+                <td> <label for="Mán">Ár:</label> 
                     <select id="Mán" name="Mán">
                     <option value="2018">2018</option>
                     <option value="2019">2019</option>
@@ -302,11 +312,17 @@
                     <option value="2023">2023</option>  
                     <option value="2024">2024</option>  
                     <option value="2025">2025</option>  
-                    <option value="2026">2026</option>  
-              </div>
+                    <option value="2026">2026</option> </select> </td>
+                  </tr>
+                </table>
+              
           </div>
+        
       </div>  
+      kaupa
     </main>
-            
+           
+    
+    
   </body>
 </html> 
