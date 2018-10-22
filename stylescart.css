@@ -98,6 +98,14 @@
         flex-flow: row;
         flex-wrap: wrap;
     }
+
+    .grid__text {
+        margin-right: -100%;
+    }
+
+    .grid__text2 {
+        margin-right: -100%;
+    }
     h2 {
         font-size: 36px;
         margin-bottom: 20px;
@@ -111,19 +119,36 @@
     p {
         font-size: 18px;
         margin-bottom: 20px;
-        width: 100%;
-        
+        width: 100%; 
     }
+    .table {
+        margin-left: 16%;
+        display: flex;
+    
+     }
+
+     td {
+       display: flex;
+       display:flex; 
+       flex-direction: row;
+       flex-wrap: wrap;
+       
+     }
+   th {
+       margin-right: 12%;
+   }
+     tr {
+         display:flex; 
+         flex-direction: row;
 }
-  
-  
+}
   /* Þegar við erum með skjáinn stærri en 1500px */
   @media (min-width: 1500px){
     main{
       padding:  0px; /* padding og grid færist ekki lengra */ 
     }
-    /* Gerði þetta svo myndirnar leggist ekki ofaná hvort aðra þegar skjárinn fer á milli þessa gilda  */ 
-    .grid__row:nth-of-type(2)>.grid__col:nth-of-type(1){
+     /* Gerði þetta svo myndirnar leggist ekki ofaná hvort aðra þegar skjárinn fer á milli þessa gilda  */ 
+     .grid__row:nth-of-type(2)>.grid__col:nth-of-type(1){
         order:1;
       }
       .grid__row:nth-of-type(2)>.grid__col:nth-of-type(2){
@@ -141,23 +166,43 @@
           flex-flow: row;
           flex-wrap: wrap;
       }
-      .text2 {
-          margin-top: 46%;
-      }
-      
-      .table {
-          margin-left: 20%;
-         flex-direction: row;
-         flex-flow: row;
-      }
+      .grid__text {
+        margin-right: -100%;
+        margin-bottom: 50%;
+    }
 
-      td {
-          display: flex;
-          flex-flow: row;
-          background-color: aqua;
-      }
-      
-      
+      h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+    h3 {
+        font-size: 21px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 16px;
+        margin-bottom: 20px; }
+    
+    .table {
+            margin-left: 16%;
+         }
+
+     td {
+           display: flex;
+           display:flex; 
+           flex-direction: row; 
+         }
+
+    th {
+           
+       }
+                 
+     tr {
+             display:flex; 
+             flex-direction: row;
+    }
+     
   }
   /* Þegar við erum á milli 800px og 1499px */
   @media (min-width: 800px) AND (max-width: 1499px){
@@ -181,6 +226,13 @@
           flex-flow: row;
           flex-wrap: wrap;
       }
+      .grid__text {
+        margin-right: -100%;
+        margin-bottom: 50%;
+    }
+        
+    
+  
       h2 {
         font-size: 36px;
         margin-bottom: 20px;
@@ -192,7 +244,25 @@
 
     p {
         font-size: 16px;
-        margin-bottom: 20px;
+        margin-bottom: 20px; }
+
+    .table {
+            margin-left: 16%;
+         }
+   
+    td {
+           display: flex;
+           display:flex; 
+           flex-direction: row;
+         }
+
+    th {
+           margin-right: 12%;
+       }
+         
+    tr {
+             display:flex; 
+             flex-direction: row;
     }
     }
     
