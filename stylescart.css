@@ -126,11 +126,11 @@
        }
   
        td {
-         display: flex;
-         display:flex; 
-         flex-direction: column;
-         flex-wrap: row wrap;
-         display: block;
+        display: flex;
+        display:flex; 
+        flex-direction: column;
+        flex-wrap: row wrap;
+        display: block;
        }
      th {
          margin-right: 12%;
