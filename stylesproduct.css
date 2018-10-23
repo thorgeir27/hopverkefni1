@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
   }
-  
+
   *, *:before, *:after {
     box-sizing: inherit;
   }
@@ -215,7 +215,8 @@
           margin-bottom: 40px;
       }
       .grid__row{
-          flex-direction: row;
+          flex-direction: column;
+          flex-direction: inherit;
       }
       .grid{
           display: flex;
@@ -227,7 +228,7 @@
         margin-bottom: 50%;
     }
         
-    
+  
   
       h2 {
         font-size: 36px;
