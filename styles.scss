@@ -28,3 +28,172 @@ body{
 //@import "scss/...";
 
 @import "scss/header.scss";
+
+* {
+  padding: 0;
+  margin: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  /* stylelint-disable-line */
+  box-sizing: border-box;
+  overflow-x: hidden; }
+
+body {
+  max-width: 1200px; 
+  
+}
+.col-md-6{
+  width: 20px;
+}
+header {
+  background-color: #afb281;
+  justify-content: center; }
+
+.header {
+  max-width: 1200px; }
+
+.image {
+  margin-left: 17%;
+  width: 590px;
+  height: auto;
+  margin-bottom: 10px;
+  margin: 0: auto; 
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 600px;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: white;
+  margin-left: 17%;
+  margin: 0: auto;
+}
+
+.col-md-6:hover .overlay {
+  opacity: 1;
+  
+}
+
+.text {
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Breytingar sem taka viÃ° er viÃ° erum undir 499px */
+@media (max-width: 499px){
+  .card__col{
+    width: 100%;
+  }
+  /* Switchum Ã¾essum dÃ¡lkum svo myndirnar sÃ©u Ã¡vallt aÃ°skildar */
+  .grid__row:nth-of-type(2)>.grid__col:nth-of-type(1){
+    order:1;
+  }
+  .grid__row:nth-of-type(2)>.grid__col:nth-of-type(2){
+    order:1;
+  }
+}
+
+/*Ãžegar viÃ° erum Ã¡ milli 500px og 799 Ã¾Ã¡ gilda Ã¾essar reglur */
+@media (min-width: 500px) AND (max-width:799px ){
+  .card__col{
+    width: 50%;
+    display: flex;
+  }
+  /* Switchum Ã¾essum dÃ¡lkum svo myndirnar sÃ©u Ã¡vallt aÃ°skildar */
+  .grid__row:nth-of-type(2)>.grid__col:nth-of-type(1){
+    order:2;
+  }
+  .grid__row:nth-of-type(2)>.grid__col:nth-of-type(2){
+    order:1;
+  }
+  .cards{
+    margin-bottom: 40px;
+  }
+}
+
+/*alhÃ¦fum fyrir allt sem er stÃ¦rra en 1489px */
+@media (min-width: 1490px){
+  main{
+    padding:  0px;
+  }
+  .card__col-3{
+    width: 33.33333333333333%;
+    display: flex;
+  }
+  .cards{
+    margin-bottom: 40px;
+  }
+  .grid{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+  
+  }
+  .grid__row{
+    flex-direction: row;
+  }
+  .grid__col-6{
+    width: 50%;
+    margin-bottom: 40px;
+  }
+}
+/*Ãžegar viÃ° erum Ã¡ milli 1000 og 1489 Ã¾Ã¡ gilda Ã¾essar reglur */
+@media (min-width: 1000px) AND (max-width: 1489px){
+  .card__col-3{
+    width: 33.3%;
+    display: flex;
+
+  }
+  .cards{
+    margin-bottom: 40px;
+  }
+  .grid{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+  
+  }
+  .grid__row{
+    flex-direction: row;
+  }
+  .grid__col-6{
+    width: 50%;
+    margin-bottom: 40px;
+}
