@@ -13,7 +13,7 @@
     font-size: 16px;
   }
   
-  
+  /*stærð á myndum og staðsettning*/
   main {
     margin: 0 auto;
     max-width: 1200px;
@@ -21,26 +21,27 @@
     padding-right: 0px;
   }
   
+  /*það sem ég geri bryjar*/
+
+/*stærð á mydnum og fleira*/
   .overlay{
     width: 100%;
     height: 100%;
     display: inline-block;
-    
     position: relative;
   }
   
   .overlay img{
     width: 100%;
     height: 100%;
-    border-radius: 4px;
     transition: .3s;
   }
-  
+  /*svo að myndi hverfi þegar það er hoverað yfir hana*/
   .overlay:hover img{
     opacity: 0;
   
   }
-  
+  /*svo textin se a bakvið myndina þegar það er ekki hoverað yfir hana og allt það sem á að vera i textanum*/
   .overlay :not(img){
     position: absolute;
     top: 30%;
@@ -52,11 +53,11 @@
     transition: .3s;
     
   }
-  
+  /*svo textinn sjaist þegar það er hoverað yfir hann*/
   .overlay:hover :not(img){
     opacity: 1;
   }
-  
+  /*textin i h1 i htmlinu allt um hann*/
   .overlay h1{
     top: 50%;
     color: black;
@@ -68,7 +69,7 @@
     text-align: center;
     font-size: 36px;
   }
-  
+  /*textinn i P allt um hann*/
   .overlay p{
     color: black;
     font-size: 26px;
@@ -81,18 +82,11 @@
     text-align: center;
   }
   
-  .text {
-    margin-bottom: 20px;
-  }
-  
-  .text p {
-    margin-bottom: 20px;
-  }
-  
   .image {
-    max-width: 100%;
+    max-width: 1100%;
     margin-bottom: -20px;
   }
+  /* allt sem eg gerði endar/*
   
   /* grid fyrir efni, setja Ã¾arf upp Ã­ html */
   .grid{
@@ -100,12 +94,12 @@
   
   }
   /*Ãžetta Ã¡ aÃ° gilda um Ã¾etta allt svo sleppum aÃ° skrifa oftar en 1x */
-  .grid__col, .grid__col-6 .card__col, .card__col-12, .card__col-6, .card__col-3{
+  .grid__col, .grid__col-6 {
       padding-right: 10px;
       padding-left: 10px;
   }
   
-  .cards__row, .grid__row{
+  .grid__row{
     display: flex;
     margin-left: -10px;
      margin-right: -10px;
@@ -116,141 +110,16 @@
     flex-direction: column;
   
   }
-  .cards__row{
-    flex-direction: row;
-    flex-wrap: wrap;
   
-  }
   
   .grid__col {
     width: 100%;
   
   }
   
-  /* grid fyrir cards */
-  
-  .cards {
-    justify-content:space-around;
-    display: flex;
-    flex-flow: row wrap;
-    }
-  
-  /* TODO ÃºtfÃ¦ra grid fyrir cards */
-  
-  /*
-    .card kemur Ã³breytt Ãºr sÃ½nilausn Ã¡ verkefni 5 fyrir utan responsive stÃ­la og
-    aÃ° Ã¾aÃ° fÃ¦r `height: 100%;`
-    SÃ½nilausn verÃ°ur gefin Ãºt viÃ° lok dags miÃ°vikudaginn 3. okt
-  */
-  
-  /* TODO .card stÃ­lar Ãºr v5 (eÃ°a sÃ½nilausn...) */
-  .card {
-    display: flex;
-    flex-direction: column;
-  
-    margin-bottom: 10px;
-    padding: 10px;
-    width: 100%;
-    max-width: 470px;
-    max-height: 300px;
-    overflow: auto;
-  
-  
-    background-color: #fff;
-    border: 2px solid #aaa;
-    border-radius: 5px;
-  }
-  
-  .card__title {
-    margin-bottom: 20px;
-  
-    font-size: 1.375em;
-    line-height: 1;
-    word-break: break-word;
-  }
-  
-  .card__content {
-    display: flex;
-    flex: 1;
-  }
-  
-  .card__text {
-    font-size: 1em;
-    line-height: 1.375;
-    overflow: auto;
-    word-break: break-word;
-  }
-  
-  .card__image {
-    padding-left: 20px;
-    flex: 0 0 150px;
-  }
-  
-  .card__img {
-    max-width: 100%;
-  }
-  
-  .card__tags {
-    margin-top: 10px;
-  
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-  
-    list-style: none;
-  }
-  
-  .card__tag {
-    font-weight: bold;
-    margin-right: 10px;
-  }
-  
-  /*Breytingar sem taka viÃ° er viÃ° erum undir 699px */
-  @media (max-width: 699px){
-    .card__col-12{
-      width: 100%;
-    }
-    /* Switchum Ã¾essum dÃ¡lkum svo myndirnar sÃ©u Ã¡vallt aÃ°skildar */
-    .grid__row:nth-of-type(2)>.grid__col:nth-of-type(1){
-      order:2;
-    }
-    .grid__row:nth-of-type(2)>.grid__col:nth-of-type(2){
-      order:1;
-    }
-    .card{
-      border:0px solid #aaa; /*nÃºlla Ãºt hitt gildiÃ°*/
-      border-radius: 0px; /*NÃºlla Ãºt aÃ° Ã¾aÃ° erfi radiusinn*/
-      border-bottom: 2px solid #aaa;
-      margin-bottom: 20px;
-      max-width: 100%;
-      max-height: 100%;
-      padding: 0px; /*NÃºlla Ãºt 10px Ã­ orginal card*/
-      padding-bottom: 20px;
-    }
-    .card__content {
-      flex-direction: column;
-    }
-   
-   .card__text {
-      margin-bottom: 20px;
-  
-    }
-    .card__image {
-      padding-left: 0px;
-      width: 100%;
-      margin-bottom: 20px;
+    /*Breytingar þegar við erum undir 499px */
+  @media (max-width: 499px){
     
-    }
-    .card__img {
-      max-width: 100%;
-    }
-  }
-  /*Ãžegar viÃ° erum Ã¡ milli 700px og 999 Ã¾Ã¡ gilda Ã¾essar reglur */
-  @media (min-width: 700px) AND (max-width:999px ){
-    .card__col-6{
-      width: 50%;
-      display: flex;
-    }
     /* Switchum Ã¾essum dÃ¡lkum svo myndirnar sÃ©u Ã¡vallt aÃ°skildar */
     .grid__row:nth-of-type(2)>.grid__col:nth-of-type(1){
       order:2;
@@ -258,23 +127,35 @@
     .grid__row:nth-of-type(2)>.grid__col:nth-of-type(2){
       order:1;
     }
-    .cards{
-      margin-bottom: 40px;
-    }
+    
   }
   
-  /*alhÃ¦fum fyrir allt sem er stÃ¦rra en 1489px */
-  @media (min-width: 1490px){
+  @media (min-width: 800px) AND (max-width: 1000px){
     main{
       padding:  0px;
     }
-    .card__col-3{
-      width: 33.33333333333333%;
+
+    .grid{
       display: flex;
+      flex-flow: row;
+      flex-wrap: wrap;
+    
     }
-    .cards{
+    .grid__row{
+      flex-direction: row;
+    }
+    .grid__col-6{
+      width: 50%;
       margin-bottom: 40px;
+  }
+
+  }
+  /*allt stærra en 1500px */
+  @media (min-width: 1500px){
+    main{
+      padding:  0px;
     }
+   
     .grid{
       display: flex;
       flex-flow: row;
@@ -289,16 +170,10 @@
       margin-bottom: 40px;
     }
   }
-  /*Ãžegar viÃ° erum Ã¡ milli 1000 og 1489 Ã¾Ã¡ gilda Ã¾essar reglur */
-  @media (min-width: 1000px) AND (max-width: 1489px){
-    .card__col-3{
-      width: 33.3%;
-      display: flex;
-  
-    }
-    .cards{
-      margin-bottom: 40px;
-    }
+  /*á milli 1000 og 1499 gildir þetta*/
+
+  @media (min-width: 1000px) AND (max-width: 1499px){
+   
     .grid{
       display: flex;
       flex-flow: row;
