@@ -28,6 +28,8 @@ body{
 //@import "scss/...";
 
 @import "scss/header.scss";
+@import "scss/staffstyles.scss";
+@import "scss/footer.scss";
 
 
 
@@ -46,87 +48,3 @@ body{
 
 
 
-
-
-
-/*Breytingar sem taka viÃ° er viÃ° erum undir 499px */
-@media (max-width: 499px){
-  .card__col{
-    width: 100%;
-  }
-  /* Switchum Ã¾essum dÃ¡lkum svo myndirnar sÃ©u Ã¡vallt aÃ°skildar */
-  .grid__row:nth-of-type(2)>.grid__col:nth-of-type(1){
-    order:1;
-  }
-  .grid__row:nth-of-type(2)>.grid__col:nth-of-type(2){
-    order:1;
-  }
-}
-
-/*Ãžegar viÃ° erum Ã¡ milli 500px og 799 Ã¾Ã¡ gilda Ã¾essar reglur */
-@media (min-width: 500px) AND (max-width:799px ){
-  .card__col{
-    width: 50%;
-    display: flex;
-  }
-  /* Switchum Ã¾essum dÃ¡lkum svo myndirnar sÃ©u Ã¡vallt aÃ°skildar */
-  .grid__row:nth-of-type(2)>.grid__col:nth-of-type(1){
-    order:2;
-  }
-  .grid__row:nth-of-type(2)>.grid__col:nth-of-type(2){
-    order:1;
-  }
-  .cards{
-    margin-bottom: 40px;
-  }
-}
-
-/*alhÃ¦fum fyrir allt sem er stÃ¦rra en 1489px */
-@media (min-width: 1490px){
-  main{
-    padding:  0px;
-  }
-  .card__col-3{
-    width: 33.33333333333333%;
-    display: flex;
-  }
-  .cards{
-    margin-bottom: 40px;
-  }
-  .grid{
-    display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
-  
-  }
-  .grid__row{
-    flex-direction: row;
-  }
-  .grid__col-6{
-    width: 50%;
-    margin-bottom: 40px;
-  }
-}
-/*Ãžegar viÃ° erum Ã¡ milli 1000 og 1489 Ã¾Ã¡ gilda Ã¾essar reglur */
-@media (min-width: 1000px) AND (max-width: 1489px){
-  .card__col-3{
-    width: 33.3%;
-    display: flex;
-
-  }
-  .cards{
-    margin-bottom: 40px;
-  }
-  .grid{
-    display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
-  
-  }
-  .grid__row{
-    flex-direction: row;
-  }
-  .grid__col-6{
-    width: 50%;
-    margin-bottom: 40px;
-}
