@@ -1,0 +1,71 @@
+@import "scss/config";
+
+footer{
+    background-color: $red;
+    width: 100vw;
+
+    @media (min-width: $maxWidth) {
+        display: flex;
+    }
+}
+
+.footer {
+    margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (min-width: $maxWidth) {
+        width: 1200px;
+        margin: auto;
+    }
+
+    &__list {
+        width: 50%;
+
+        @media (min-width: $maxWidth) {
+            width: 25%;
+        }
+    }
+
+    &__heading {
+        font-family: $headingFont;
+        font-size: 24px;
+        margin-top: 24px;
+        margin-bottom: 14px;
+    }
+
+    &__li {
+        font-family: $mainFont;
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    &__ul {
+        list-style: none;
+    }
+
+    &__link {
+        color: $lightYellow;
+        text-decoration: none;
+        transition: color 300ms ease-in-out;
+
+        &:visited {
+            color: $lightYellow;
+        }
+
+        &:hover {
+            color: $black;
+        }
+    }
+
+    &__copyright {
+        width: 100%;
+        text-align: center;
+        margin-right: 20px;
+        padding-top: 60px;
+        padding-bottom: 48px;
+        font-family: $mainFont;
+        font-size: 12px;
+    }
+
+}

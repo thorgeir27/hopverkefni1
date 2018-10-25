@@ -2,9 +2,75 @@
 
 header{
     background-color: $green;
-    justify-content: center;
+    display: flex;
+    width: 100vw;
+}
+
+.header--container{
+    width: 100vw;
+    @media (min-width: $maxWidth) {
+        max-width: $maxWidth;
+        margin: auto;
+    }
 }
 
 .header {
-    max-width: $maxWidth;
+    width: 100%;
+    font-family: $headingFont;
+    text-align: center;
+
+    h1{
+        font-size: 60px;
+        width: 100%;
+    }
+    &__sections{
+        width: 100%;
+        display: flex;
+        font-size: 18px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 12px;
+        @media (min-width: $break1) {
+            justify-content: flex-end;
+        }
+    }
+
+    &__section{
+        width: 33%;
+        font-weight: 700;
+        margin-bottom: 12px;
+
+        @media (min-width: $break1) {
+            width: 16.67%;
+            
+        }
+    }
+    &--karfa{
+        display: inline-flex;
+        align-content: center;
+        justify-content: center;
+        width: 25%;
+        margin-bottom: 12px;
+        margin-right: 20px;
+        @media (min-width: $break1) {
+            justify-content: flex-end;
+        }
+    }
+    &__link{
+        color: $black;
+        text-decoration: none;
+        transition: color 300ms ease-in-out;
+
+        &:visited{
+            color: $black;
+        }
+        &:hover{
+            color: $white;
+        }
+    }
+}
+
+.image--karfa{
+    height: 21px;
+    margin-right: 10px;
 }
