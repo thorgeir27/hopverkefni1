@@ -22,9 +22,14 @@ body{
   max-width: $maxWidth;
 }
 
+.h2{
+  background-color: pink;
+}
+
 
 
 // TODO sækja allar sass skrár
 //@import "scss/...";
 
 @import "scss/header.scss";
+@import "scss/footer.scss";
