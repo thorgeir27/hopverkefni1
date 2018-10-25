@@ -5,7 +5,7 @@ main{
     width: 100vw;
     @media (min-width: $maxWidth) {
         width: $maxWidth;
-        display: flex;
+        //display: flex;
         margin: auto;
     }
 }
@@ -20,8 +20,8 @@ main{
         flex-wrap: wrap;
     }
     @media (min-width: $maxWidth) {
-        margin-left: 0;
-        padding-right: 0;
+        //margin-left: 0;
+        //padding-right: 0;
     }
 
     &__box{
@@ -30,12 +30,17 @@ main{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        padding-right: 20px;
 
         @media (min-width: $break1) {
             width: 50%;
             &:nth-child(3) {
                 order: 1;
             }
+        }
+
+        @media (min-width: $maxWidth) {
+            //padding-left: 20px;
         }
 
     }
