@@ -1,4 +1,4 @@
-Vörur í körfu
+<h1>Vörur í körfu </H1>
 
 Ótrúlegt úr
 Hvað er klukkan? Þetta úr mun svara því hvenær sem er.
