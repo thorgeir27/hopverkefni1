@@ -3,8 +3,8 @@
 main{
     background-color: $white;
     width: 100vw;
-    margin-left: 20px;
-    padding-right: 40px;
+    //margin-left: 20px;
+    //padding-right: 40px;
     @media (min-width: $maxWidth) {
         display: flex;
         margin: auto;
@@ -16,6 +16,7 @@ main{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
 
     @media (min-width: $maxWidth) {
         width: $maxWidth;
@@ -29,17 +30,25 @@ main{
         @media (min-width: $break2) {
             width: 50%;
             padding-right: 10px;
+            padding-left: 20px;
 
             &:nth-child(even) {
                 padding-left: 10px;
-                padding-right: 0px;
+                padding-right: 20px;
             }
         }
 
         @media (min-width: $maxWidth) {
-            width: 400px;
-            padding-left: 0px;
-            padding-right: 0px;
+            width: 32.2%;
+            padding-right: 0px !important;
+            padding-left: 0px !important;
+
+            margin-right: 20px;
+
+            &:nth-child(3n) {
+                margin-right: 0px;
+            }
+
         }
     }
 
@@ -67,12 +76,16 @@ main{
         font-size: 24px;
         width: 100%;
         margin-top: 24px;
+
+        @media (min-width: $break2) {
+            height: 150px;
+        }
     }
     &__price {
         font-family: $headingFont;
         font-size: 36px;
         width: 100%;
-        margin-top: 36px;
+        //margin-top: 36px;
     }
 
     &__order {
