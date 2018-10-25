@@ -6,9 +6,9 @@ main{
     margin-left: 20px;
     padding-right: 40px;
     @media (min-width: $maxWidth) {
-        width: $maxWidth;
         display: flex;
         margin: auto;
+        justify-content: center;
     }
 }
 
@@ -17,12 +17,35 @@ main{
     display: flex;
     flex-wrap: wrap;
 
+    @media (min-width: $maxWidth) {
+        width: $maxWidth;
+
+    }
+
     &__box {
-        width: 100%
+        width: 100%;
+        margin-bottom: 24px;
+
+        @media (min-width: $break2) {
+            width: 50%;
+            padding-right: 10px;
+
+            &:nth-child(even) {
+                padding-left: 10px;
+                padding-right: 0px;
+            }
+        }
+
+        @media (min-width: $maxWidth) {
+            width: 400px;
+            padding-left: 0px;
+            padding-right: 0px;
+        }
     }
 
     &__image {
         width: 100%;
+        margin-top: 12px;
     }
 
     &__text {
@@ -43,7 +66,7 @@ main{
         font-family: $mainFont;
         font-size: 24px;
         width: 100%;
-        margin-top: 36px;
+        margin-top: 24px;
     }
     &__price {
         font-family: $headingFont;
@@ -57,7 +80,7 @@ main{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin-top: 36px;
+        margin-top: 12px;
     }
 
     &__order-p{
@@ -79,10 +102,18 @@ main{
         width: 41%;
         font-family: $mainFont;
         font-size: 21px;
-        padding: 18px;
+        padding: 12px;
         border-radius: 4px;
         background-color: $white;
         border: 1px solid $black;
+        padding-right: 1px;
+        padding-left: 1px;
+
+        transition: background-color 300ms ease-in-out;
+
+        &:hover {
+            background-color: $red;
+        }
 
         &image {
             height: 21px;
