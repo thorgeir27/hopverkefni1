@@ -1,0 +1,136 @@
+@import "config.scss";
+
+main{
+    background-color: $white;
+    width: 100vw;
+    //margin-left: 20px;
+    //padding-right: 40px;
+    @media (min-width: $maxWidth) {
+        display: flex;
+        margin: auto;
+        justify-content: center;
+    }
+}
+
+.products {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    @media (min-width: $maxWidth) {
+        width: $maxWidth;
+
+    }
+
+    &__box {
+        width: 100%;
+        margin-bottom: 24px;
+
+        @media (min-width: $break2) {
+            width: 50%;
+            padding-right: 10px;
+            padding-left: 20px;
+
+            &:nth-child(even) {
+                padding-left: 10px;
+                padding-right: 20px;
+            }
+        }
+
+        @media (min-width: $maxWidth) {
+            width: 32.2%;
+            padding-right: 0px !important;
+            padding-left: 0px !important;
+
+            margin-right: 20px;
+
+            &:nth-child(3n) {
+                margin-right: 0px;
+            }
+
+        }
+    }
+
+    &__image {
+        width: 100%;
+        margin-top: 12px;
+    }
+
+    &__text {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: space-around;
+    }
+
+    &__heading{
+        font-family: $headingFont;
+        font-size: 48px;
+        width: 100%;
+        margin-top: 36px;
+    }
+
+    &__p {
+        font-family: $mainFont;
+        font-size: 24px;
+        width: 100%;
+        margin-top: 24px;
+
+        @media (min-width: $break2) {
+            height: 150px;
+        }
+    }
+    &__price {
+        font-family: $headingFont;
+        font-size: 36px;
+        width: 100%;
+        //margin-top: 36px;
+    }
+
+    &__order {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 12px;
+    }
+
+    &__order-p{
+        font-family: $mainFont;
+        font-size: 24px;
+        width: 100%;
+    }
+    
+    &__input {
+        width: 57%;
+        font-family: $mainFont;
+        border: 1px solid $black;
+        border-radius: 4px;
+        font-size: 21px;
+        padding-left: 12px;
+    }
+
+    &__button {
+        width: 41%;
+        font-family: $mainFont;
+        font-size: 21px;
+        padding: 12px;
+        border-radius: 4px;
+        background-color: $white;
+        border: 1px solid $black;
+        padding-right: 1px;
+        padding-left: 1px;
+
+        transition: background-color 300ms ease-in-out;
+
+        &:hover {
+            background-color: $red;
+        }
+
+        &image {
+            height: 21px;
+        }
+    }
+
+}
