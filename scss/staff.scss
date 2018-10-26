@@ -1,61 +1,205 @@
+* { /* Efni frá kennara */ 
+  margin: 0;
+  padding: 0;
+}
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  html {
+    box-sizing: border-box;
+    font-family: 'Open Sans', helvetica, arial, sans-serif;
+    font-size: 16px;
+  }
+  
+  /*stærð á myndum og staðsettning*/
+  main {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  
+  /*það sem ég geri bryjar*/
 
-.Staff__main__wrap{
-	align-items: center;
-}
-.Staff__main__row{
-	display:flex;
-	flex-direction:column;
-	margin-left:-10px;
-	margin-right:-10px;
-	margin-bottom: 40px;
-	@media (min-width:700px){
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-	}
-}
-.Staff__main__col{
-	width:100%;
-	padding-left:10px;
-	padding-right:10px;
-	@media (min-width: 700px){
-		width: 50%;
-	}
-	@media (min-width: 1000px){
-		width: 50%;
-	}
+/*stærð á mydnum og fleira*/
+  .overlay{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .overlay img{
+    width: 100%;
+    height: 100%;
+    transition: .3s;
+  }
+  /*svo að myndi hverfi þegar það er hoverað yfir hana*/
+  .overlay:hover img{
+    opacity: 0;
+  
+  }
+  /*svo textin se a bakvið myndina þegar það er ekki hoverað yfir hana og allt það sem á að vera i textanum*/
+  .overlay :not(img){
+    position: absolute;
+    top: 30%;
+    z-index: 1;
+    color: black;
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    transition: .3s;
+    
+  }
+  /*svo textinn sjaist þegar það er hoverað yfir hann*/
+  .overlay:hover :not(img){
+    opacity: 1;
+  }
+  /*textin i h1 i htmlinu allt um hann*/
+  .overlay h1{
+    top: 50%;
+    color: black;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 36px;
+  }
+  /*textinn i P allt um hann*/
+  .overlay p{
+    color: black;
+    font-size: 26px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .image {
+    max-width: 1500%;
+    margin-bottom: -20px;
+  }
+  /* allt sem eg gerði endar/*
+  
+ /* Hefði getað skrifað allt í röð og gert kommu á eftir öllu en nenni ekki að breyta */ 
+.grid__col { 
+  padding-right: 10px;/* Þetta er padding til hægri og vinstri á öllu dálkunum og eftir hvernig þeir minnka*/ 
+  padding-left: 10px;
+  padding-bottom: 10px;
 }
 
-.Staff__main__wrap:hover{
-	transform: rotateY(180deg);
+.grid__col { /* Svo efnið haldist 100% í síðunni */
+width: 100%; 
 }
 
-.Staff__main__col__img{
-	backface-visibility: hidden;
-	justify-content: center;
-	width:100%;
+.grid__row { /* Svo að dálkar raðist upp í column þegar þeir minnka */ 
+flex-direction: column;
+display: flex; 
+margin-left: -10px;
+margin-right: -10px;
 }
-.Staff__main__col__img>img{
-	width:100%;
-}
-.Staff__main__wrap{
-	transform-style: preserve-3d;
-	transition: transform 0.3s ease-in-out;
-	justify-content: center;
-	display:flex;
-	margin-bottom: 20px;
-}
-.Staff__main__col__backface{
-	backface-visibility: hidden;
-	text-align: center;
-	transform: rotateY(180deg);
-	position: absolute;
-	line-height: 2;
+/* Þegar við erum undir 499px þá breytist þetta svona */
+@media (max-width: 500px) {
+/* Gerði þetta svo myndirnar leggist ekki ofaná hvort aðra þegar skjárinn fer undir 699px */ 
+.grid__row:nth-of-type(2) > .grid__col:nth-of-type(1) {/* Leggjast á textann í staðinn */ 
+order: 1;
 }
 
-@media screen and (min-width: 500px){
-	.Staff__main__col__backface{
-		top: 43%;
-	}
+.grid__row:nth-of-type(2) > .grid__col:nth-of-type(2) {
+order: 1; 
 }
 
+main{
+  padding-left: 20px;
+  margin-bottom: 40px;
+  padding-right: 20px;
+  max-width: 500px;
+}
+
+.image{
+  padding-bottom: 20px;
+}
+
+.overlay p {
+    font-size: 20px;
+    
+}
+.overlay h1{
+  font-size: 30px;
+}
+
+}
+
+/* Þegar við erum á milli 500px og 799px þá breytist þetta svona */
+@media (min-width: 501px) AND (max-width:800px ){
+  main{
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 800px;
+  }
+ 
+  .image{
+    padding-bottom: 20px;
+  }
+  
+  .overlay p {
+      font-size: 16px;
+      
+  }
+  .overlay h1{
+    font-size: 30px;
+  }
+  
+}
+
+/* Þegar við erum með skjáinn stærri en 1500px */
+@media (min-width: 1501px){
+main{
+  padding:  0px; /* padding og grid færist ekki lengra */ 
+}
+ 
+  .grid__col-6{
+      width: 33%; /* Stóru myndirnar raðast að hlið við textann */ 
+      margin-bottom: 40px;
+  }
+  .grid__row{
+      flex-direction: row;
+  }
+  .grid{
+      display: flex;
+      flex-flow: row;
+      flex-wrap: wrap;
+  }
+
+}
+/* Þegar við erum á milli 800px og 1499px */
+@media (min-width: 801px) AND (max-width: 1500px){
+
+/* Gerði þetta svo myndirnar leggist ekki ofaná hvort aðra þegar skjárinn fer á milli þessa gilda  */ 
+
+  .grid__col-6{
+      width: 50%; /* Stóru myndirnar raðast að hlið við textann */ 
+      margin-bottom: 40px;
+  }
+  .grid__row{
+      flex-direction: row;
+  }
+  .grid{
+      display: flex;
+      flex-flow: row;
+      flex-wrap: wrap;
+  }
+  .grid__text {
+    margin-right: -100%;
+    margin-bottom: 50%;
+}
+
+
+}
