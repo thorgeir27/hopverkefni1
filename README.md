@@ -17,7 +17,7 @@ npm run dev
 Til þess að keyra stylelint 
 
 ```bash
-1.  npm run lint -scss
+npm run lint -scss
 ```
 
 ## Lýsing verkefnis
