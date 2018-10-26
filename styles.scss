@@ -35,11 +35,12 @@ p,a,label{  /* stylelint-disable-line */
   font-family: "Open-Sans","helvetica","arial","sans-serif";
 }
 
-
-
-
-
+@import "scss/variables.scss";
+@import "scss/animation.scss";
+@import "scss/fonts.scss";
+@import "scss/index.scss";
 @import "scss/header.scss";
 @import "scss/footer.scss";
 @import "scss/Staff.scss";
-
+@import "scss/products.scss";
+@import "scss/cart.scss";
