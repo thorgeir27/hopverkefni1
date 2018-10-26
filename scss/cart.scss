@@ -1,3 +1,255 @@
-@import "scss/config"; 
+@import "config.scss";
 
- 
+.cart__main{
+    background-color: $white;
+    width: 100vw;
+    padding-left: 20px;
+    padding-right: 20px;
+    @media (min-width: $maxWidth) {
+        display: flex;
+        margin: auto;
+        justify-content: center;
+    }
+}
+
+.cart {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    @media (min-width: $maxWidth) {
+        width: $maxWidth;
+
+    }
+
+    &__box {
+        width: 100%;
+        margin-bottom: 24px;
+
+        @media (min-width: $break2) {
+            padding-right: 10px;
+            //padding-left: 20px;
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        @media (min-width: $maxWidth) {
+            padding-right: 0px !important;
+            padding-left: 0px !important;
+
+            margin-right: 20px;
+
+        }
+    }
+
+    &__image {
+        width: 100%;
+        margin-top: 12px;
+
+        &-img{
+            width: 100%;
+        }
+
+        @media (min-width: $break2) {
+            width: 32%;
+            margin-right: 20px;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+
+        height: 32vw;
+        margin-bottom: 64px;
+
+        @media (min-width: $break2) {
+            width: 65%;
+            flex-direction: column;
+        }
+
+        @media (min-width: $maxWidth) {
+            height: 390px;
+        }
+    }
+
+    &__heading{
+        font-family: $headingFont;
+        font-size: 36px;
+        width: 100%;
+        margin-top: 36px;
+
+        @media (min-width: $break2) {
+            margin-top: 0;
+            padding-top: 10px;
+        }
+    }
+
+    &__p {
+        font-family: $mainFont;
+        font-size: 18px;
+        width: 100%;
+        margin-top: 24px;
+
+        @media (min-width: $break2) {
+            margin-bottom: 0px;
+            margin-top: 0;
+        }
+    }
+    &__price {
+        font-family: $headingFont;
+        font-size: 24px;
+        width: 100%;
+        //margin-top: 36px;
+    }
+
+    &__order {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-top: 12px;
+    }
+
+    &__order-p{
+        font-family: $mainFont;
+        font-size: 24px;
+        width: 100%;
+    }
+    
+    &__input {
+        width: 23%;
+        font-family: $mainFont;
+        border: 1px solid $black;
+        border-radius: 4px;
+        font-size: 21px;
+        padding-left: 12px;
+
+        @media (max-width: 499px) {
+            margin-left: 0;
+            width: 100%;
+            margin-bottom: 10px;
+        } 
+    }
+
+    &__button {
+        width: auto;
+        font-family: $mainFont;
+        font-size: 18px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        padding-left: 12px;
+        padding-right: 12px;
+        border-radius: 4px;
+        background-color: $white;
+        border: 1px solid $black;
+        margin-left: 18px;
+
+        @media (max-width: 499px) {
+            margin-left: 0;
+            width: 100%;
+            margin-bottom: 10px;
+        } 
+        transition: background-color 300ms ease-in-out;
+
+        &:hover {
+            background-color: $red;
+        }
+
+        &image {
+            height: 21px;
+        }
+    }
+
+    &__send {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        
+        @media (min-width: $break2) {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__sendcontainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: $break2) {
+            width: 48%;
+            margin-right: 20px;
+        }
+    }
+
+    &__sendbox {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 24px;
+    }
+
+    &__send-p {
+        font-family: $mainFont;
+        font-size: 18px;
+        width: 33%;
+        padding-top: 5px;
+    }
+
+}
+
+.send {
+
+    &__input {
+        height: 36px;
+        width: 67%;
+        margin-bottom: 24px;
+        border: 1px solid $black;
+        border-radius: 4px;
+    }
+
+    &--input {
+        display: flex;
+        justify-content: space-between;
+        width: 67%;
+        height: 36px;
+    }
+
+    &__select {
+        border: 1px solid $black;
+        border-radius: 4px;
+    }
+
+    &__button {
+        width: 100%;
+        padding: 64px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+
+    &--kaupabutton {
+        width: 300px;
+        font-size: 24px;
+        height: 48px;
+        font-family: $mainFont;
+        background-color: $red;
+        border: none;
+        border-radius: 4px;
+
+        transition: background-color 300ms ease-in-out;
+        transition: color 300ms ease-in-out;
+
+        &:hover {
+            background-color: $black;
+            color: $red;
+        }
+
+    }
+}
