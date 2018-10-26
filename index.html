@@ -7,75 +7,79 @@
 
     <link rel="stylesheet" href="grid.css">
     <link rel="stylesheet" href="styles.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Oswald:400,700" rel="stylesheet">
   </head>
   <body>
     <header>
-      <section class="header">
-        <h1>Vöruhúsið</h1>
-        <div class="header__sections">
-            <div class="header__section"><a href="index.html">FORSÍÐA</a></div>
-            <div class="header__section"><a href="pages/products.html">VÖRUR</a></div>
-            <div class="header__section"><a href="pages/staff.html">STARFSFÓLK</a></div>
-            <div class="header--karfa"><a href="pages/cart.html">Karfa (3)</a></div>
-        </div>
-      </section>
+      <div class="header--container">
+        <section class="header">
+          <h1>Vöruhúsið</h1>
+          <div class="header__sections">
+              <div class="header__section"><a class="header__link" href="index.html">FORSÍÐA</a></div>
+              <div class="header__section"><a class="header__link" href="pages/products.html">VÖRUR</a></div>
+              <div class="header__section"><a class="header__link" href="pages/staff.html">STARFSFÓLK</a></div>
+              <div class="header--karfa"><a class="header__link" href="pages/cart.html"><img class="image--karfa" src="img/cart.svg">Karfa (3)</a></div>
+          </div>
+        </section>
+      </div>
     </header>
     <main>
       <section class="main">
         <div class="main__box">
-          <h2>Allar Vörurnar</h2>
-          <p>Vöruhúsið hefur allar þær vörur sem þig vantar.</p>
-          <button>Skoða Vörur</button>
+          <h2 class="main__heading">Allar Vörurnar</h2>
+          <p class="main__p">Vöruhúsið hefur allar þær vörur sem þig vantar.</p>
+          <button class="main__button">Skoða Vörur</button>
         </div>
         <div class="main__box">
-          <img src="img/products.jpg" alt="Hjá vöruhúsinu er allt til">
+          <img class="main__image" src="img/products.jpg" alt="Hjá vöruhúsinu er allt til">
         </div>
         <div class="main__box">
-          <h2>Besta starfsfólkið</h2>
-          <p>Starfsfólkið okkar hugsar vel um þig.</p>
-          <button>Kynnast starfsfólki</button>
+          <h2 class="main__heading">Besta starfsfólkið</h2>
+          <p class="main__p">Starfsfólkið okkar hugsar vel um þig.</p>
+          <button class="main__button">Kynnast starfsfólki</button>
         </div>
         <div class="main__box">
-          <img src="img/team.jpg" alt="Mynd af höndum teymisins">
+          <img class="main__image" src="img/team.jpg" alt="Mynd af höndum teymisins">
         </div>
       </section>
     </main>
     <footer>
       <section class="footer">
         <div class="footer__list">
-          <h3>Vöruflokkar</h3>
-          <ul>
-              <li><a href="pages/products.html">Nauðsynjavörur</a></li>
-              <li><a href="pages/products.html">Frábærar vörur</a></li>
-              <li><a href="pages/products.html">Ómissandi vörur</a></li>
-              <li><a href="pages/products.html">Ótrúlegar vörur</a></li>
-              <li><a href="pages/products.html">Magnaðar vörur</a></li>
+          <h3 class="footer__heading">Vöruflokkar</h3>
+          <ul class="footer__ul">
+              <li class="footer__li"><a class="footer__link" href="pages/products.html">Nauðsynjavörur</a></li>
+              <li class="footer__li"><a class="footer__link" href="pages/products.html">Frábærar vörur</a></li>
+              <li class="footer__li"><a class="footer__link" href="pages/products.html">Ómissandi vörur</a></li>
+              <li class="footer__li"><a class="footer__link" href="pages/products.html">Ótrúlegar vörur</a></li>
+              <li class="footer__li"><a class="footer__link" href="pages/products.html">Magnaðar vörur</a></li>
           </ul>
         </div>
         <div class="footer__list">
-          <h3>Vöruflokkar</h3>
-          <ul>
-              <li><a href="pages/products.html">Trylltar vörur</a></li>
-              <li><a href="pages/products.html">Geggjaðar vörur</a></li>
-              <li><a href="pages/products.html">Svakalegar vörur</a></li>
-              <li><a href="pages/products.html">Fáránlegar vörur</a></li>
-              <li><a href="pages/products.html">Klikkaðar vörur</a></li>
+          <h3 class="footer__heading">Vöruflokkar</h3>
+          <ul class="footer__ul">
+              <li class="footer__li"><a class="footer__link" href="pages/products.html">Trylltar vörur</a></li>
+              <li class="footer__li"><a class="footer__link" href="pages/products.html">Geggjaðar vörur</a></li>
+              <li class="footer__li"><a class="footer__link" href="pages/products.html">Svakalegar vörur</a></li>
+              <li class="footer__li"><a class="footer__link" href="pages/products.html">Fáránlegar vörur</a></li>
+              <li class="footer__li"><a class="footer__link" href="pages/products.html">Klikkaðar vörur</a></li>
           </ul>
         </div>
         <div class="footer__list">
-          <h3>Vöruflokkar</h3>
-          <ul>
-              <li><a href="pages/products.html">Nýjar vörur</a></li>
-              <li><a href="pages/products.html">Gamlar vörur</a></li>
-              <li><a href="pages/products.html">Skrítnar vörur</a></li>
+          <h3 class="footer__heading">Vöruflokkar</h3>
+          <ul class="footer__ul">
+              <li class="footer__li"><a class="footer__link" href="pages/products.html">Nýjar vörur</a></li>
+              <li class="footer__li"><a class="footer__link" href="pages/products.html">Gamlar vörur</a></li>
+              <li class="footer__li"><a class="footer__link" href="pages/products.html">Skrítnar vörur</a></li>
           </ul>
         </div>
         <div class="footer__list">
-          <h3>Síður</h3>
-          <ul>
-              <li><a href="pages/products.html">Allar vörur</a></li>
-              <li><a href="pages/products.html">Starfsfólk</a></li>
-              <li><a href="pages/products.html">Karfa</a></li>
+          <h3 class="footer__heading">Síður</h3>
+          <ul class="footer__ul">
+              <li class="footer__li"><a class="footer__link" href="pages/products.html">Allar vörur</a></li>
+              <li class="footer__li"><a class="footer__link" href="pages/products.html">Starfsfólk</a></li>
+              <li class="footer__li"><a class="footer__link" href="pages/products.html">Karfa</a></li>
           </ul>
         </div>
         <div class="footer__copyright">

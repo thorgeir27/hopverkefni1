@@ -19,9 +19,6 @@ html { /* stylelint-disable-line */
   // TODO fleiri grunn stillingar
 }
 
-body{
-  max-width: $maxWidth;
-}
 
 
 
@@ -29,6 +26,7 @@ body{
 //@import "scss/...";
 
 @import "scss/header.scss";
+@import "scss/index.scss";
 @import "scss/footer.scss";
 @import "scss/products.scss";
 @import "scss/cart.scss";
