@@ -18,33 +18,12 @@ html { /* stylelint-disable-line */
   // TODO fleiri grunn stillingar
 }
 
-body{
+body {
   max-width: $maxWidth;
 }
-
-
 
 // TODO sækja allar sass skrár
 //@import "scss/...";
 
 @import "scss/header.scss";
 @import "scss/staffstyles.scss";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
