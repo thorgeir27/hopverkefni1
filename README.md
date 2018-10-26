@@ -17,16 +17,7 @@ npm run dev
 Til þess að keyra stylelint 
 
 ```bash
-1.  npm install --save-dev stylelint
-2.  npm install --save-dev stylelint-config-primer
-3.  "extends": "stylelint-config-primer" 
-4.  "scripts": {
-  "browser-sync": "browser-sync start --server --files index.html styles.css",
-  "sass": "node-sass styles.scss styles.css -w",
-  "dev": "npm-run-all --parallel sass browser-sync",
-  "lint": "stylelint styles.scss --syntax scss" 
-},
-5.  npm run lint -s
+1.  npm run lint -scss
 ```
 
 ## Lýsing verkefnis
