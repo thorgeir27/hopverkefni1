@@ -1,0 +1,81 @@
+@import "scss/config";
+
+main{
+    background-color: $white;
+    width: 100vw;
+    @media (min-width: $maxWidth) {
+        width: $maxWidth;
+        //display: flex;
+        margin: auto;
+    }
+}
+
+.main {
+    width: 100%;
+    margin-left: 20px;
+    padding-right: 20px;
+
+    @media (min-width: $break1) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    @media (min-width: $maxWidth) {
+        //margin-left: 0;
+        //padding-right: 0;
+    }
+
+    &__box{
+        height: 400px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding-right: 20px;
+
+        @media (min-width: $break1) {
+            width: 50%;
+            &:nth-child(3) {
+                order: 1;
+            }
+        }
+
+        @media (min-width: $maxWidth) {
+            //padding-left: 20px;
+        }
+
+    }
+
+    &__heading{
+        font-family: $headingFont;
+        font-size: 48px;
+    }
+
+    &__p {
+        font-family: $mainFont;
+        font-size: 24px;
+    }
+
+    &__button {
+        width: 70%;
+        font-size: 21px;
+        background-color: $red;
+        font-family: $mainFont;
+        padding-bottom: 12px;
+        padding-top: 12px;
+        border-radius: 8px;
+        border: none;
+
+        transition: color 300ms ease-in-out;
+        transition: background-color 300ms ease-in-out;
+
+        &:hover {
+            color: $red;
+            background-color: $black;
+        }
+    }
+
+    &__image {
+        width: 100%;
+    }
+
+}

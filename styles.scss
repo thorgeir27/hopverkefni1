@@ -1,5 +1,6 @@
 @import "scss/config";
 
+
 * {
   padding: 0;
   margin: 0;
@@ -16,9 +17,6 @@ html { /* stylelint-disable-line */
   overflow-x: hidden;
   font-size: 16px;
   // TODO fleiri grunn stillingar	
-}
-body{  /* stylelint-disable-line */
-	grid-template-columns: 20px [col-start] 20px [col-start] 20px [col-start];
 }
 
 main{ /* stylelint-disable-line */
@@ -37,5 +35,9 @@ p,a,label{  /* stylelint-disable-line */
 
 
 @import "scss/header.scss";
-@import "scss/footer.scss";
 @import "scss/Staff.scss";
+@import "scss/index.scss";
+@import "scss/footer.scss";
+@import "scss/products.scss";
+@import "scss/cart.scss";
+
