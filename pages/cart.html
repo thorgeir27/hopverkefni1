@@ -6,7 +6,7 @@
     <title>Karfa</title>
 
     <link rel="stylesheet" href="../grid.css">
-    <link rel="stylesheet" href="../stylescart.css">
+   
     <link rel="stylesheet" href="../styles.css">
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Oswald:400,700" rel="stylesheet">
@@ -26,69 +26,48 @@
         </section>
       </div>
     </header>
-
     <main>
-      
-        <h2 class="main__heading">Vörur í körfu</h2>
-        <div class="grid">
-
-          <div class="grid__row">
-            <div class="grid__col grid__col-3">
-              <img class="image" src="../img/watch.jpg" alt="Ótrúlegt úr">
-            </div>
-          
-            <div class="grid__col grid__col-3">
-              <div class="grid__text">
-                <h2>Ótrúlegt úr</h2>   
-                  <p>Hvað er klukkan? Þetta úr mun svara því hvenær sem er.</p>
-              </div>
-              <div class="text2">
-                <div class="grid__price">
-                  <h3>99.900 kr.- </h3>
-                </div>  
-                  <div class="takkar">
-                    <p>Fjöldi: </p> 
-                    <input type="number" value="1" >
-                    <button> <img class="image--karfa" src="../img/cart.svg">Uppfæra</button>
-                    <button> <img class="image--karfa" src="../img/cart.svg">Eyða úr körfu</button>
-                  </div>
-              </div>  
-            </div> 
-          </div>
-          <div class="grid__row">
-            <div class="grid__col grid__col-3">
-              <img class="image" src="../img/headphones.jpg" alt="Headphones">
-            </div>  
-
-            <div class="grid__col grid__col-3">
-              <div class="grid__text">   
-                <h2>Hágæða heyrnatól </h2>  
-                 <p>Þú munt ekki heyra neitt nema hágæða tónlist með þessum hágæða heyrnartólum. Höfum við minnst á að þau eru hágæða? </p>
-              </div>
-              <div class="text2">  
-                <div class="grid__price">
-                  <h2>39.999 kr.-</h2>
+        <main>
+            <section class="products">
+              <div class="products__box">
+                <div class="products__image">
+                  <img class="products__image" src="../img/watch.jpg">
                 </div>
-                  <div class="takkar">
-                    <p>Fjöldi: </p>
-                    <input type="number" value="2"> 
-                    <button> <img class="image--karfa" src="../img/cart.svg">Uppfæra</button>
-                    <button> <img class="image--karfa" src="../img/cart.svg">Eyða úr körfu</button>
-                </div>  
+                <div class="products__text">
+                  <h2 class="products__heading">Ótrúlegt úr</h2>
+                  <p class="products__p">Hvað er klukkan? Þetta úr mun svara því hvenær sem er.</p>
+                  <h3 class="products__price">99.900 kr.-</h3>
+                  <div class="products__order">
+                    <p class="products__order-p">Fjöldi:</p>
+                    <input class="products__input" type="number" value="1">
+                    <button class="products__button"><img class="products__buttonimage" src="../img/cart.svg"> Uppfæra</button>
+                    <button class="products__button"><img class="products__buttonimage" src="../img/cart.svg"> Eyða úr körfu</button>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        
-         
-              <div class="grid__row">
-                <div class="grid__col-6">
-                  
-                    <h2>Sendingarupplýsingar</h2>
-                  
-                        Nafn:<input type="text" name="nafn">
-                        Heimilisfang:<input type="text" name="Heimilisfang"></td>
-                      <label for="Póstnúmer">Póstnúmer:</label> 
-                      <select id="Póstnúmer" name="póstnúmer">
+              <div class="products__box">
+                <div class="products__image">
+                  <img class="products__image" src="../img/headphones.jpg">
+                </div>
+                <div class="products__text">
+                  <h2 class="products__heading">Hágæða heyrnatól</h2>
+                  <p class="products__p">Þú munt ekki heyra neitt nema hágæða tónlist með þessum hágæða heyrnartólum. Höfum við minnst á að þau eru hágæða?</p>
+                  <h3 class="products__price">4.900 kr.-</h3>
+                  <div class="products__order">
+                    <p class="products__order-p">Fjöldi:</p>
+                    <input class="products__input" type="number" value="1">
+                    <button class="products__button"><img class="products__buttonimage" src="../img/cart.svg"> Uppfæra</button>
+                    <button class="products__button"><img class="products__buttonimage" src="../img/cart.svg"> Eyða úr körfu</button>
+                  </div>
+                </div>
+              </div>
+              <div class="products__box">   
+                <div class="products__text">  
+                  <h2 class="grid__product">Sendingarupplýsingar</h2>
+                  <p class="grid__p">Nafn:<input type="text" name="nafn"> </p>
+                  <p class="grid__p">Heimilisfang:<input type="text" name="Heimilisfang"> </p>
+                  <label class="grid__nr" for="Póstnúmer">Póstnúmer:</label> 
+                  <select id="Póstnúmer" name="póstnúmer">
                             <option value="veljið" hidden disabled selected>-Velja póstnúmer</option> 
                             <option value="bla">101 Reykjavík</option>
                             <option value="bla">103 Reykjavík</option>
@@ -271,18 +250,16 @@
                             <option value="bla">881 Kirkjubæjarklaustri</option>
                             <option value="bla">900 Vestmannaeyjum</option>
                             <option value="bla">902 Vestmannaeyjum</option>
-                      </select>
-                    
-                </div>   
-               
-                <div class="grid__col grid__col-6">  
-                     
-                    <h2>Greiðsluupplýsingar</h2>
-                 
-                      Kortanúmer:<input type="text" name="Kortanúmer">
-                      Korthafi: <input type="text" name="Korthafi">
-                      Gildisími:<label for="Mán">Mán:</label> 
-                        <select id="Mán" name="Mán">
+                  </select> 
+                </div>
+              </div>
+              <div class="products__box">   
+                <div class="products__text">  
+                      <h2 class="grid__product">Greiðsluupplýsingar</h2>
+                      <p class="grid__p">Kortanúmer:<input type="text" name="Kortanúmer"> </p>
+                      <p class="grid__p">Korthafi: <input type="text" name="Korthafi"> </p>
+                      <p class="grid__p">Gildisími: <label for="Mán">Mán:</label> 
+                      <select id="Mán" name="Mán">
               <option value="jan">01</option>
               <option value="feb">02</option>
               <option value="mar">03</option>
@@ -295,9 +272,9 @@
               <option value="okt">10</option>  
               <option value="nov">11</option>  
               <option value="des">12</option>   
-                        </select>
-                        <label for="Mán">Ár:</label> 
-                          <select id="Mán" name="Mán">
+                      </select>
+                      <label for="Mán">Ár:</label> 
+                      <select id="Mán" name="Mán">
                           <option value="2018">2018</option>
                           <option value="2019">2019</option>
                           <option value="2020">2020</option>
@@ -306,15 +283,20 @@
                           <option value="2023">2023</option>  
                           <option value="2024">2024</option>  
                           <option value="2025">2025</option>  
-                          <option value="2026">2026</option> </select>
-                        
-                  </div>
-                </div>  
-           
+                      <option value="2026">2026</option> </select> </p>
+                </div>
+              </div>
+              <div class="products__box">
+                <div class="products__text">
+                  <button class="grid__button2">Skoða Vörur</button>
+                </div>
+              </div>
+                  
+                
+            </section>
                   
     
           
-          kaupa
      
 
     </main>

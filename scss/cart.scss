@@ -1,203 +1,136 @@
-@import "scss/config"; 
+@import "config.scss";
 
-* { /* Efni frá kennara */ 
-    margin: 0;
-    padding: 0;
-  }
-
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-
-  html {
-    box-sizing: border-box;
-    font-family: 'Open Sans', helvetica, arial, sans-serif;
-    font-size: 16px;
-  } /* Endar */ 
-
-  main {
-    margin: 0 auto;
-    max-width: 1200px; 
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .text {
-    margin-bottom: 20px;
-  }
-
-  .text p {
-    margin-bottom: 20px;
-  }
-
-.image {
-    max-width: 100%;
-    margin-bottom: 20px;
-}
-
-/* Hefði getað skrifað allt í röð og gert kommu á eftir öllu en nenni ekki að breyta */ 
-.grid__col { 
-      padding-right: 10px;/* Þetta er padding til hægri og vinstri á öllu dálkunum og eftir hvernig þeir minnka*/ 
-      padding-left: 10px;
-}
-
-.grid__col { /* Svo efnið haldist 100% í síðunni */
-    width: 100%; 
-  }
-
-.grid__row { /* Svo að dálkar raðist upp í column þegar þeir minnka */ 
-    flex-direction: column;
-    display: flex; 
-    margin-left: -10px;
-    margin-right: -10px;
-}
-/* Þegar við erum undir 499px þá breytist þetta svona */
-@media (max-width: 499px) {
-/* Gerði þetta svo myndirnar leggist ekki ofaná hvort aðra þegar skjárinn fer undir 699px */ 
-.grid__row:nth-of-type(2) > .grid__col:nth-of-type(1) {/* Leggjast á textann í staðinn */ 
-    order: 1;
-}
-
-.grid__row:nth-of-type(2) > .grid__col:nth-of-type(2) {
-    order: 1; 
-}
-
-h2 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-h3 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 21px;
-    margin-bottom: 20px;
-}
-}
-
-  /* Þegar við erum á milli 500px og 799px þá breytist þetta svona */
-  @media (min-width: 500px) AND (max-width:799px ){
-    
-/* Gerði þetta svo myndirnar leggist ekki ofaná hvort aðra þegar skjárinn fer undir 699px */ 
-.grid__row:nth-of-type(2)>.grid__col:nth-of-type(1){ /* Leggjast á textann í staðinn */ 
-    order:1;
-}
-.grid__row:nth-of-type(2)>.grid__col:nth-of-type(2){
-    order:1; 
-}
-
-h2 {
-    font-size: 48px;
-    margin-bottom: 20px;
- }
-h3 {
-    font-size: 36px;
-    margin-bottom: 20px;
-      }
-  
-      p {
-          font-size: 21px;
-          margin-bottom: 20px;
-  }
-  }
-  
-  /* Þegar við erum með skjáinn stærri en 1500px */
-@media (min-width: 1500px){
 main{
-  padding:  0px; /* padding og grid færist ekki lengra */ 
-}
-/* Gerði þetta svo myndirnar leggist ekki ofaná hvort aðra þegar skjárinn fer á milli þessa gilda  */ 
-.grid__row:nth-of-type(2)>.grid__col:nth-of-type(1){
-    order:1;
-}
-      .grid__row:nth-of-type(2)>.grid__col:nth-of-type(2){
-        order:1;
-      }
-.grid__col-3 {
-    width: 33%; /* Stóru myndirnar raðast að hlið við textann */ 
-}
-.grid__row{
-    flex-direction: row;
+    background-color: $white;
+    width: 100vw;
+    //margin-left: 20px;
+    //padding-right: 40px;
+    @media (min-width: $maxWidth) {
+        display: flex;
+        margin: auto;
+        justify-content: center;
+    }
 }
 
-.grid{
-    flex-flow: row;
+.products {
+    width: 100%;
+    display: flex;
     flex-wrap: wrap;
-}
+    justify-content: flex-start;
 
-.grid__text {
-    margin-right: -100%;
-    margin-bottom: 50%;
+    @media (min-width: $maxWidth) {
+        width: $maxWidth;
+
     }
 
-.grid__col-6 {
-    margin-left: 20%;
-    width: 20%;
-}
+    &__box {
+        width: 100%;
+        margin-bottom: 24px;
 
-h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
+        @media (min-width: $break2) {
+            width: 50%;
+            padding-right: 10px;
+            padding-left: 20px;
 
-h3 {
-    font-size: 21px;
-    margin-bottom: 20px;
-}
+            &:nth-child(even) {
+                padding-left: 10px;
+                padding-right: 20px;
+            }
+        }
 
-p {
-    font-size: 16px;
-    margin-bottom: 20px; 
-}
- 
+        @media (min-width: $maxWidth) {
+            width: 32.2%;
+            padding-right: 0px !important;
+            padding-left: 0px !important;
 
+            margin-right: 20px;
 
+            &:nth-child(3n) {
+                margin-right: 0px;
+            }
 
-}
-/* Þegar við erum á milli 800px og 1499px */
-@media (min-width: 800px) AND (max-width: 1499px){
+        }
+    }
+
+    &__image {
+        width: 100%;
+        margin-top: 12px;
+    }
+
+    &__text {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: space-around;
+    }
+
+    &__heading{
+        font-family: $headingFont;
+        font-size: 48px;
+        width: 100%;
+        margin-top: 36px;
+    }
+
+    &__p {
+        font-family: $mainFont;
+        font-size: 24px;
+        width: 100%;
+        margin-top: 24px;
+
+        @media (min-width: $break2) {
+            height: 150px;
+        }
+    }
+    &__price {
+        font-family: $headingFont;
+        font-size: 36px;
+        width: 100%;
+        //margin-top: 36px;
+    }
+
+    &__order {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 12px;
+    }
+
+    &__order-p{
+        font-family: $mainFont;
+        font-size: 24px;
+        width: 100%;
+    }
     
-    /* Gerði þetta svo myndirnar leggist ekki ofaná hvort aðra þegar skjárinn fer á milli þessa gilda  */ 
-    .grid__row:nth-of-type(2)>.grid__col:nth-of-type(1){
-        order:1;
-      }
-      .grid__row:nth-of-type(2)>.grid__col:nth-of-type(2){
-        order:1;
-      }
-      .grid__col-3{
-          width: 33%; /* Stóru myndirnar raðast að hlið við textann */ 
-         
-      }
-      .grid__row{
-          flex-direction: row;
-      }
-      .grid{
-          flex-flow: row;
-          flex-wrap: wrap;
-      }
-      .grid__text {
-        margin-right: -100%;
-        margin-bottom: 50%;
-    }
-
-h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-h3 {
+    &__input {
+        width: 57%;
+        font-family: $mainFont;
+        border: 1px solid $black;
+        border-radius: 4px;
         font-size: 21px;
-        margin-bottom: 20px;
+        padding-left: 12px;
     }
 
+    &__button {
+        width: 41%;
+        font-family: $mainFont;
+        font-size: 21px;
+        padding: 12px;
+        border-radius: 4px;
+        background-color: $white;
+        border: 1px solid $black;
+        padding-right: 1px;
+        padding-left: 1px;
 
-p {
-        font-size: 16px;
-        margin-bottom: 20px; 
+        transition: background-color 300ms ease-in-out;
+
+        &:hover {
+            background-color: $red;
+        }
+
+        &image {
+            height: 21px;
+        }
     }
-
 
 }
